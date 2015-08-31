@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Lookback/Lookback.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Lookback setupWithAppToken:@"cD5dsSPdqtvZ2gCnq"];
+    [Lookback sharedLookback].shakeToRecord = YES;
+    [Lookback sharedLookback].feedbackBubbleVisible = YES;
+    
     return YES;
 }
 
